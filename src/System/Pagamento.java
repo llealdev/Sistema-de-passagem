@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Pagamento {
 
-    private Double valor_total;
+    private Double valorTotal;
     private String tipoPagamento;
     private String statusPagamento;
     private Date dataPagamento;
@@ -13,25 +13,26 @@ public class Pagamento {
 
     }
 
-    public Pagamento(Double valor_total, String tipoPagamento, String statusPagamento, Date dataPagamento) {
-        this.valor_total = valor_total;
+    public Pagamento(Double valorTotal, String tipoPagamento, String statusPagamento, Date dataPagamento) {
+        this.valorTotal = valorTotal;
         this.tipoPagamento = tipoPagamento;
         this.statusPagamento = statusPagamento;
         this.dataPagamento = dataPagamento;
+
     }
 
-    public Pagamento(Double valor_total, String tipoPagamento, String statusPagamento) {
-        this.valor_total = valor_total;
+    public Pagamento(Double valorTotal, String tipoPagamento, String statusPagamento) {
+        this.valorTotal = valorTotal;
         this.tipoPagamento = tipoPagamento;
         this.statusPagamento = statusPagamento;
     }
 
     public Double getValor_total() {
-        return valor_total;
+        return valorTotal;
     }
 
     public void setValor_total(Double valor_total) {
-        this.valor_total = valor_total;
+        this.valorTotal = valor_total;
     }
 
     public String getTipoPagamento() {
@@ -56,5 +57,10 @@ public class Pagamento {
 
     public void setDataPagamento(Date dataPagamento) {
         this.dataPagamento = dataPagamento;
+    }
+
+    public void parcelamento(int parcela){
+        double valorPacerlamento = valorTotal / parcela;
+
     }
 }

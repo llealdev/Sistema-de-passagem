@@ -2,18 +2,18 @@ package System;
 
 import java.util.Date;
 
-public class ResevaPassagem {
+public class ReservaPassagem {
 
     private Passagem passagem;
     private Pagamento pagamento;
     private InformacaoCliente informacaoCliente;
     private Date dataReserva;
 
-    public ResevaPassagem() {
+    public ReservaPassagem() {
 
     }
 
-    public ResevaPassagem(Passagem passagem, Pagamento pagamento, InformacaoCliente informacaoCliente, Date dataReserva) {
+    public ReservaPassagem(Passagem passagem, Pagamento pagamento, InformacaoCliente informacaoCliente, Date dataReserva) {
         this.passagem = passagem;
         this.pagamento = pagamento;
         this.informacaoCliente = informacaoCliente;
@@ -51,4 +51,14 @@ public class ResevaPassagem {
     public void setDataReserva(Date dataReserva) {
         this.dataReserva = dataReserva;
     }
+
+    @Override
+    public String toString(){
+        return "Destino: " + passagem.getDestino() + "\n"
+                + "Tipo de passagem: " + passagem.getTipoPassagem() + "\n"
+                + "Data da passagem: " + passagem.getDataPassagem() + "\n"
+                + "Tipo de pagamento: " + pagamento.getTipoPagamento() + "\n"
+                + "Valor Total: " + pagamento.getValor_total() + "\n";
+    }
+
 }
